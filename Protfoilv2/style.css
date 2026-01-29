@@ -1,0 +1,608 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #fff2e0, #ffe0b8);
+  color: #000;
+}
+
+/* NAVBAR */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 60px;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #7a4f00;
+  text-shadow: 2px 2px 10px rgba(122,79,0,0.4);
+}
+
+nav a {
+  margin-left: 30px;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  position: relative;
+}
+
+nav a:hover {
+  color: #7a4f00;
+}
+
+nav .btn {
+  padding: 10px 20px;
+  border: 2px solid #7a4f00;
+  border-radius: 30px;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  align-items: center;
+  padding: 60px;
+}
+
+.hero-img img {
+  width: 420px;
+  border-radius: 50%;
+  padding: 15px;
+  background: #e6d3b3;
+}
+
+.hero-text {
+  margin-left: 400px;
+  max-width: 500px;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+}
+
+.hero-text h1 span {
+  color: #7a4f00;
+  text-shadow: 2px 2px 15px rgba(122,79,0,0.5);
+}
+
+.hero-text h2 {
+  font-size: 36px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hero-text h2 span {
+  color: #7a4f00;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.hero-text p {
+  margin: 20px 0;
+  line-height: 1.6;
+}
+.hero-text h2 span {
+  color: #7a4f00;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #7a4f00;
+  animation: typing 6s steps(12) infinite, blink 0.7s infinite;
+}
+
+/* WORD CHANGE */
+.hero-text h2 span::before {
+  content: "Developer";
+  animation: homewords 6s infinite;
+}
+
+/* TYPING EFFECT */
+@keyframes typing {
+  0% { width: 0; }
+  40% { width: 14ch; }
+  60% { width: 14ch; }
+  100% { width: 0; }
+}
+
+/* CURSOR BLINK */
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+/* WORDS */
+@keyframes homewords { 
+  0%, 33% { content: "Developer"; } 
+  34%, 66% { content: "Ethical hacker"; } 
+  67%, 100% { content: "Cybersecurity"; }
+ }
+
+
+/* SOCIAL ICONS */
+.socials a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border: 2px solid #7a4f00;
+  border-radius: 50%;
+  margin-right: 15px;
+  color: #7a4f00;
+  transition: 0.3s;
+}
+
+.socials a:hover,
+.socials a:focus {
+  background: #7a4f00;
+  color: white;
+  box-shadow: 0 0 25px rgba(122,79,0,0.7);
+}
+
+/* BUTTON */
+.download-btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 15px 40px;
+  background: #7a4f00;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.download-btn:hover,
+.download-btn:active {
+  box-shadow: 0 0 30px rgba(122,79,0,0.8);
+  transform: translateY(-2px);
+}
+
+/* SECTIONS */
+.section {
+  padding: 80px 60px;
+}
+
+.section h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #7a4f00;
+}
+
+.section.light {
+  background: #ffe8c7;
+}
+
+.box {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.section {
+  padding: 80px 60px;
+}
+
+.section h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #7a4f00;
+}
+
+/* CARD GRID */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+/* CARD */
+.card {
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(122,79,0,0.25);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.card .btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 8px 18px;
+  background: #7a4f00;
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+.card .btn:hover {
+  box-shadow: 0 0 15px rgba(122,79,0,0.6);
+}
+
+
+/* PROJECT CARDS (same layout as certificate cards) */
+.cards-container .card {
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: 0.3s ease;
+}
+
+.cards-container .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rrgba(122,79,0,0.25);
+}
+
+.cards-container .card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.cards-container .card-content {
+  padding: 20px;
+}
+
+.cards-container .card-content h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.cards-container .card-content p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.cards-container .card .btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 8px 18px;
+  background:#7a4f00;
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: 13px;
+  transition: 0.3s;
+}
+
+.cards-container .card .btn:hover {
+  box-shadow: 0 0 15px rgba(122,79,0,0.6);
+}
+
+/*contactus*/
+.contact-section {
+  background-color: #FFF2D8; /* dark background */
+  color: #7a4f00;
+  padding: 60px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  max-width: 1200px;
+  margin: auto;
+  justify-content: center;
+}
+
+/* FORM */
+.contact-form {
+  flex: 1;
+  min-width: 320px;
+  max-width: 500px;
+}
+
+.contact-form h2 {
+  color: #7a4f00;
+  margin-bottom: 20px;
+}
+
+.contact-form label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #7a4f00;
+  border-radius: 8px;
+  background-color: #2b2b2b;
+  color: white;
+  resize: none;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #d9b583; /* lighter shade of #7a4f00 */
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #9B7E00;
+}
+
+.contact-form button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  background-color: #7a4f00;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #d9b583; /* lighter hover color */
+  box-shadow: 0 0 10px #d9b583;
+}
+
+/* CONTACT INFO */
+.contact-info {
+  flex: 1;
+  min-width: 320px;
+  max-width: 500px;
+}
+
+.contact-info p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.info-item {
+  margin-bottom: 15px;
+}
+
+.info-item span {
+  font-weight: bold;
+  color: #7a4f00;
+}
+
+.info-item p {
+  margin: 5px 0 0 0;
+}
+
+/* MAP */
+.map iframe {
+  width: 100%;
+  height: 200px;
+  border: 0;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+/*skill*/
+.skills-section {
+  background-color: #fde7c6;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.skills-title {
+  font-size: 32px;
+  color: #7a4f00;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 22px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.skill-card {
+  background-color: #fff;
+  border: 2px solid #7a4f00;
+  border-radius: 16px;
+  padding: 25px 15px;
+  transition: 0.3s ease;
+}
+
+.skill-card i {
+  font-size: 32px;
+  color: #7a4f00;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 50%;
+  border: 2px solid #7a4f00;
+  margin-bottom: 12px;
+}
+
+.skill-card p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #7a4f00;
+}
+
+/* Hover Effect */
+.skill-card:hover {
+  background-color: #7a4f00;
+  transform: translateY(-6px);
+}
+
+.skill-card:hover i,
+.skill-card:hover p {
+  color: #fff;
+  border-color: #fff;
+}
+
+/*about me*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+}
+
+body {
+  background:  #fde7c6;
+  color: #7a4f00;
+}
+
+/* SECTION */
+.about {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+/* PROFILE RING */
+.profile-ring {
+  position: relative;
+  width: 170px;
+  height: 170px;
+  margin-bottom: 25px;
+}
+
+.profile-ring .ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: linear-gradient(
+    45deg,
+    #fde7c6
+    #7a4f00
+    #00c6ff
+  );
+  animation: rotate 4s linear infinite;
+}
+
+.profile-ring img {
+  position: absolute;
+  inset: 8px;
+  width: calc(100% - 16px);
+  height: calc(100% - 16px);
+  border-radius: 50%;
+  object-fit: cover;
+  z-index: 1;
+  background: #000;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* TYPING EFFECT (CSS ONLY) */
+.typing-text {
+  font-size: 22px;
+  margin-bottom: 15px;
+  
+}
+
+.typing-about span {
+  color: #7a4f00;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  border-right: 3px solid #7a4f00;
+  animation: aboutType 6s steps(18) infinite;
+}
+
+.typing-about span::before {
+  content: "Frontend Developer";
+  animation: aboutwords 8s infinite;
+}
+
+.typing-about span::after {
+  content: "";
+  position: absolute;
+  right: -5px;
+  width: 2px;
+  height: 100%;
+  background: #7a4f00;
+  animation: blink 0.7s infinite;
+}
+
+/* WORD CHANGE */
+@keyframes aboutType {
+  0% { width: 0; }
+  40% { width: 18ch; }
+  60% { width: 18ch; }
+  100% { width: 0; }
+}
+@keyframes aboutWords {
+  0%, 50% {
+    content: "CyberSecurity";
+  }
+  51%, 100% {
+    content: "Ethical Hacker";
+  }
+}
+
+
+
+/* PARAGRAPH */
+.about p {
+  max-width: 600px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #a86a00;
+}
